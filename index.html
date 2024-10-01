@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemilil Sugar Academy</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: white;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .nav-items {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-link.active {
+            color: green;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .apply-now-button {
+            background-color: lightblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .banner-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .banner-subtext {
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .grey-container,
+        .study-at {
+            background-color: #343a40;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 300px; /* Adjust this value as needed */
+            border-radius: 0; /* Remove rounded corners if needed */
+        }
+
+        .study-at {
+            text-align: center;
+        }
+
+        .programmes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .programme-box {
+            width: 150px;
+            text-align: center;
+        }
+
+        .programme-box img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="assets/img/logo.jpg" alt="Chemilil High School Logo">
+        <div class="nav-items">
+            <a href="/" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Academics</a>
+                <div class="dropdown-content">
+                    <a href="#">Downloads</a>
+                    <a href="#">Fee Structure</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Student Life</a>
+                <div class="dropdown-content">
+                    <a href="#">Co-Curricular</a>
+                    <a href="#">News/Events</a>
+                </div>
+            </div>
+            <a href="#" class="nav-link">About Us</a>
+            <button class="apply-now-button">Admissions</button>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/Chemo2.jpg" class="d-block w-100" alt="First Slide">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Chemo3.jpg" class="d-block w-100" alt="Second Slide">
+            </div>
+        </div>
+        <div class="carousel-caption">
+            <h1 class="banner-text">Chemilil Sugar Academy</h1>
+            <p class="banner-subtext">Empowering young minds for a brighter future.</p>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- School Info Section -->
+    <div class="container">
+        <h2 class="section-title">Chemilil at a Glance</h2>
+        <div class="row">
+            <div class="col-md-6 grey-container">
+                <h4>Our Vision</h4>
+                <p>To be a leading educational institution.</p>
+                <h4>Our Mission</h4>
+                <p>To provide quality education that fosters growth and development.</p>
+                <h4>Core Values</h4>
+                <ul>
+                    <li>Integrity</li>
+                    <li>Discipline</li>
+                    <li>Excellence</li>
+                </ul>
+            </div>
+            <div class="col-md-6 grey-container">
+                <h4>Why Study with Us?</h4>
+                <p>Chemilil Sugar Academy is not just another school. Our commitment to educational excellence is reflected in our outstanding results, with a remarkable pass rate of 100.00%. As a mixed, private-sponsored school, we provide a nurturing environment that supports every student's journey to success.</p>
+                <p>Our dedicated staff, modern facilities, and innovative teaching methods ensure that each student receives a top-quality education tailored to their needs. Join us and be part of a community where academic achievement and personal growth are our top priorities. Experience a school where your future is our focus, and every day brings new opportunities for excellence.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Programmes Section -->
+    <div class="container">
+        <h2 class="section-title">Programmes</h2>
+        <div class="programmes">
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Mathematics">
+                <p>Mathematics</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="English">
+                <p>English</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Kiswahili">
+                <p>Kiswahili</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Science">
+                <p>Sciences</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Geography">
+                <p>Geography</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="History">
+                <p>History</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="CRE">
+                <p>CRE</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Business Studies">
+                <p>Business Studies</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="French">
+                <p>French</p>
+            </div>
+            <div class="programme-box">
+                <img src="assets/img/math.webp" alt="Computer Studies">
+                <p>Computer Studies</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Study at Chemilil Sugar Academy Section -->
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Study at Chemilil Sugar Academy</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 study-at">
+                <p>Enroll now and be part of our prestigious school community.</p>
+                <img src="assets/img/Chemo1.jpg" alt="Apply Now Image" style="width: 100%; height: 200px; object-fit: cover; margin-top: 10px; border-radius: 5px;">
+                <button style="margin-top: 15px; background-color: lightblue; border-color: lightblue; color: black;" class="btn btn-primary">Apply Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Physical Location: Muhoroni, Kisumu County, Kenya</p>
+        <p>Postal Address: P.O. Box 177 – 40107 Muhoroni, Kenya</p>
+        <p>&copy; 2024 Chemilil Sugar Academy. All rights reserved.</p>
+        <p>Designed by <a href="https://spencelabs.netlify.app" style="color: black; text-decoration: none;">Spencelabs</a>.</p>
+    </div>
+
+</body>
+
+</html>
